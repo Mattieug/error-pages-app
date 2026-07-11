@@ -6,6 +6,9 @@ const app = express();
 app.get('/background_guiofamily.png', (req, res) => {
   res.sendFile(path.join(__dirname, 'background_guiofamily.png'));
 });
+app.get('/background_guofamily_mobile.png', (req, res) => {
+  res.sendFile(path.join(__dirname, 'background_guofamily_mobile.png'));
+});
 
 const messages = {
   400: ["Requête invalide", "Le serveur n'a pas compris votre requête."],
@@ -60,10 +63,16 @@ function renderPage(code, ip, host) {
   .meta-label { color: #94a3b8; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.66rem; margin-bottom: 0.2rem; font-weight: 600; }
   .meta-value { color: #1e293b; font-family: 'SF Mono', Consolas, monospace; font-size: 0.82rem; word-break: break-all; }
   .footer { margin-top: 1.6rem; font-size: 0.75rem; color: #94a3b8; }
-  @media (max-width: 480px) {
-    .card { padding: 2rem 1.5rem; }
+  @media (max-width: 640px) {
+    body {
+      background-image: url('https://errors-page.guiofamily.fr/background_guofamily_mobile.png');
+      padding: 1.25rem;
+    }
+    .card { padding: 2rem 1.5rem; max-width: 100%; }
     .code { font-size: 3.25rem; }
-    .meta { grid-template-columns: 1fr; }
+    .message { font-size: 1.15rem; }
+    .explanation { font-size: 0.88rem; }
+    .meta { grid-template-columns: 1fr; gap: 0.75rem; }
   }
 </style>
 </head>
