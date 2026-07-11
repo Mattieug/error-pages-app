@@ -7,7 +7,7 @@ app.get('/background_guiofamily.png', (req, res) => {
   res.sendFile(path.join(__dirname, 'background_guiofamily.png'));
 });
 app.get('/background_guofamily_mobile.png', (req, res) => {
-  res.sendFile(path.join(__dirname, 'background_guofamily_mobile.png'));
+  res.sendFile(path.join(__dirname, 'background_guiofamily_mobile.png'));
 });
 
 const messages = {
@@ -65,7 +65,7 @@ function renderPage(code, ip, host) {
   .footer { margin-top: 1.6rem; font-size: 0.75rem; color: #94a3b8; }
   @media (max-width: 640px) {
     body {
-      background-image: url('https://errors-page.guiofamily.fr/background_guofamily_mobile.png');
+      background-image: url('https://errors-page.guiofamily.fr/background_guiofamily_mobile.png');
       padding: 1.25rem;
     }
     .card { padding: 2rem 1.5rem; max-width: 100%; }
