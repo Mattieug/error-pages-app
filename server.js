@@ -6,7 +6,7 @@ const app = express();
 app.get('/background_guiofamily.png', (req, res) => {
   res.sendFile(path.join(__dirname, 'background_guiofamily.png'));
 });
-app.get('/background_guofamily_mobile.png', (req, res) => {
+app.get('/background_guiofamily_mobile.png', (req, res) => {
   res.sendFile(path.join(__dirname, 'background_guiofamily_mobile.png'));
 });
 
