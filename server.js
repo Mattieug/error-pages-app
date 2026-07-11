@@ -2,8 +2,10 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Sert les fichiers statiques (dont background_guiofamily.png) depuis /public
-app.use(express.static(path.join(__dirname, 'public')));
+// Sert uniquement l'image de fond, placée à la racine du repo
+app.get('/background_guiofamily.png', (req, res) => {
+  res.sendFile(path.join(__dirname, 'background_guiofamily.png'));
+});
 
 const messages = {
   400: ["Requête invalide", "Le serveur n'a pas compris votre requête."],
