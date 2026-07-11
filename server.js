@@ -41,7 +41,7 @@ function renderPage(code, ip, host) {
     font-family: -apple-system, 'Segoe UI', Inter, system-ui, sans-serif;
     min-height: 100vh; display: flex; align-items: center; justify-content: center;
     padding: 2rem; background-color: #ffffff;
-    background-image: url('/background_guiofamily.png');
+    background-image: url('https://errors-page.guiofamily.fr/background_guiofamily.png');
     background-size: cover; background-position: center;
   }
   .card {
